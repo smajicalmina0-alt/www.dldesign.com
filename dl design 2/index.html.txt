@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DL Design</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0b0b0b;
+    color: #eee;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid #222;
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+header img {
+    width: 70px;
+}
+
+nav a {
+    margin: 0 15px;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top:0; left:0;
+    width:100%; height:100%;
+    background: rgba(0,0,0,0.6);
+}
+
+.hero-content {
+    position: relative;
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    color: #d4af37;
+}
+
+.hero p {
+    color: #bbb;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #d4af37;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* SECTIONS */
+section {
+    padding: 80px 40px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+h2 {
+    color: #d4af37;
+}
+
+/* SERVICES + TEAM GRID */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #222;
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: #d4af37;
+    transform: translateY(-5px);
+}
+
+/* CONTACT */
+.contact-box {
+    background: #111;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #222;
+    max-width: 600px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #222;
+    color: #666;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="logo.png" alt="DL Logo">
+
+    <nav>
+        <a href="#services">Usluge</a>
+        <a href="#team">Tim</a>
+        <a href="#about">O nama</a>
+        <a href="#contact">Kontakt</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-content">
+        <h1>DIZAJN KOJI SE VIDI</h1>
+        <p>Totemi • LED reklame • Brendiranje vozila • Fasade</p>
+        <a href="#contact" class="btn">Zatraži ponudu</a>
+    </div>
+</div>
+
+<!-- O NAMA -->
+<section id="about">
+    <h2>O nama</h2>
+    <p>
+        DL Design je firma specijalizovana za moderni vizuelni identitet, LED reklame,
+        toteme za pumpe, brendiranje vozila i dizajn fasada.
+        Naš cilj je da tvoj brend bude vidljiv i prepoznatljiv.
+    </p>
+</section>
+
+<!-- USLUGE -->
+<section id="services">
+    <h2>Usluge</h2>
+
+    <div class="services">
+        <div class="card">
+            <h3>Totemi</h3>
+            <p>Dizajn i izrada totema za pumpe i firme.</p>
+        </div>
+
+        <div class="card">
+            <h3>LED / Neon</h3>
+            <p>Svjetleće reklame koje privlače pažnju.</p>
+        </div>
+
+        <div class="card">
+            <h3>Vozila</h3>
+            <p>Brendiranje auta, kombija i kamiona.</p>
+        </div>
+
+        <div class="card">
+            <h3>Fasade</h3>
+            <p>Moderni vizuelni identitet objekata.</p>
+        </div>
+    </div>
+</section>
+
+<!-- 👥 TIM SEKCIJA (DODANO) -->
+<section id="team">
+    <h2>Naš tim</h2>
+
+    <div class="services">
+
+        <div class="card">
+            <h3>👔 Direktor</h3>
+            <p><strong>Direktor 1</strong><br>
+            Strategija, klijenti i vođenje projekata</p>
+        </div>
+
+        <div class="card">
+            <h3>👔 Direktor</h3>
+            <p><strong>Direktor 2</strong><br>
+            Operacije i organizacija proizvodnje</p>
+        </div>
+
+        <div class="card">
+            <h3>🎨 Dizajner</h3>
+            <p><strong>Dizajner 1</strong><br>
+            Grafički dizajn i LED reklame</p>
+        </div>
+
+        <div class="card">
+            <h3>🎨 Dizajner</h3>
+            <p><strong>Dizajner 2</strong><br>
+            3D vizuali i brendiranje vozila</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- KONTAKT -->
+<section id="contact">
+    <h2>Kontakt</h2>
+
+    <div class="contact-box">
+
+        <p><strong>📍 Lokacija:</strong><br>
+        Sarajevo, Bosna i Hercegovina</p>
+
+        <p><strong>📞 Telefon:</strong><br>
+        +387 61 000 000</p>
+
+        <p><strong>📧 Email:</strong><br>
+        info@dldesign.ba</p>
+
+        <p><strong>👤 Kontakt osoba:</strong><br>
+        DL Design Office</p>
+
+        <p><strong>🕒 Radno vrijeme:</strong><br>
+        Pon - Sub: 09:00 - 18:00</p>
+
+        <a href="https://wa.me/38761000000" class="btn">
+            💬 WhatsApp Kontakt
+        </a>
+
+    </div>
+</section>
+
+<footer>
+    © 2026 DL Design — Sva prava zadržana
+</footer>
+
+</body>
+</html>
